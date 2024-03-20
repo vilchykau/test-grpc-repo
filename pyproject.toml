@@ -1,13 +1,18 @@
 [tool.poetry]
-name = "test-grpc-repo"
+name = "grpc-rep-python"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
+packages = [{include = "grpc_rep_python"}]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+grpcio = "^1.62.1"
 
+
+[tool.poetry.group.dev.dependencies]
+grpcio-tools = "^1.62.1"
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,12 +1,12 @@
 python3 -m grpc_tools.protoc -I./proto \
-        --python_out=./python \
-        --pyi_out=./python \
-        --grpc_python_out=./python \
+        --python_out=./grpc_rep_python/scrapper \
+        --pyi_out=./grpc_rep_python/scrapper \
+        --grpc_python_out=./grpc_rep_python/scrapper \
         ./proto/scrapper.proto
 
 
 # Specify the directory to crawl
-directory="python"
+directory="grpc_rep_python/scrapper"
 
 # Check if the directory exists
 if [ ! -d "$directory" ]; then
