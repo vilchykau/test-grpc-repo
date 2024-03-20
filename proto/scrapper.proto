@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message SiteInformationRequest{
+    string name = 1;
+    string country = 2;
+}
+
+message SiteInformationResponse{
+    string site_code = 1;
+}
+
+service SiteInformation{
+    rpc get_information(SiteInformationRequest) returns (SiteInformationResponse) {}
+}
